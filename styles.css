@@ -1,0 +1,98 @@
+:root {
+    --timer-day: 'Seg';
+    --timer-hours: '00';
+    --timer-minutes: '00';
+    --timer-seconds: '00';
+}
+
+.day:before {
+    content: var(--timer-day);
+}
+
+.hours:before {
+    content: var(--timer-hours);
+}
+
+.minutes:before {
+    content: var(--timer-minutes);
+} 
+
+.seconds:before {
+    content: var(--timer-seconds);
+}
+
+body {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    font-family: "Opens Sans", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column; /* Coloca os itens um embaixo do outro */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    background-color: #0b0e13;
+    border-radius: 20px;
+    padding: 40px 10px;
+    box-shadow: 0 15px 90px 30px #00000040;
+
+}
+
+.greeting {
+    color: #fff;
+    margin-bottom: 5px; /* Adiciona um espaço entre a div greeting e a div cols-container */
+}
+
+.cols-container {
+    display: flex;
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+}
+
+
+.col {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
+    min-width: 90px;
+    position: relative;
+}
+
+.col:not(:last-child):before,
+.col:not(:last-child):after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 5px;
+    background-color: #ffffff26;
+    border-radius: 50%;
+    position: absolute;
+    right: -42px;
+}
+
+.col:not(:last-child):before {
+    top: 35%;
+}
+
+.col:not(:last-child):after {
+    top: 50%;
+}
+
+.timer:before {
+    color: #fff;
+    font-size: 4.2rem;
+    text-transform: uppercase;
+}
+
+.label {
+    color: #ffffff59;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 10px;
+}
